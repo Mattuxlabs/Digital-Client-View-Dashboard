@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* header css code */
+	body {font-family:'roboto';font-size:14px}
+	.head-area{height:65px;padding:10px}
+/* logo area css code */	
+	.logo{background-image:url("../images/images/DClogo.png");background-repeat: no-repeat;height:35px}	
+	.logo-area{width:100%;padding-bottom:15px}
+/* Section sizing */	
+	.control-area{height:1200px}
+	.main-content{height:1200px;background-color:#f9f9f9}
+	.footer-bkd{background-color:#333;height:100px}
+	.side-feature-area{height:100px}
+	.side-nav-area{height:700px}
+	.side-glance-area{height:200px}
+/* brand standards */
+	.sidebar-head-wrapper{padding:2px 0px}
+	.sidebar-section-head{font-size:14px;color:#111;text-transform:uppercase;font-weight:400;text-transform: uppercase}
+	.sub-section-copy{text-transform:uppercase;padding:7px 0px;color:#000000}
+/* URL Entry format */
+	.form-control{font-size:18px;border:none}
+	.form-control .placeholder{color:#888}
+/* nav items */
+
+	.nav-pills{width:100%;color:#666;border:none}
+	.spacing{padding-top:5px;padding-bottom:5px}
+	.dropdown-menu{border:none;indent:2px}
+	nav a{color:#222;font-size:14px;text-transform: uppercase;font-weight:lighter;color:#777;margin:0px}
+	.nav-pills .nav-link.active, .nav-pills .show>.nav-link {background-color:#fff;color:#000;border-left:2px solid #4d88ff;font-size:14px;border-radius:0px;border-spacing:0px;padding-top:6px;padding-bottom:6px;text-transform: uppercase}
+	/*-- Breadcrumb css --*/
+	.root-breadcrumb{float:left;text-transform:uppercase;font-size:12px;padding-top:10px}
+	.child-breadcrumb{float:left;text-transform: uppercase;color:#888;font-size:14px}
+	.breadcrumb-clear{clear:both}
+	#breadcrumb-dcv .btn {text-decoration: underline;background-color:none;font-size:12px;color:#888;margin:0px;padding-left:3px;border-radius:0}
+	#breadcrumb-dcv .dropdown-menu{border:none; margin:0px;width:225px}
+	#breadcrumb-dcv .nav-link{color:#888;font-size:12px;color:#888}
+	#breadcrumb-dcv .btn.focus, .btn:focus{box-shadow:none}
+	#breadcrumb-dcv .alive{border-left: 2px solid #ff4d4d;font-weight:900;font-size:14px}
+	#right-nav-items .nav-link.active{border:none;color:#000;font-size:14px;padding:0px 5px}
+	#right-nav-items .nav-item a {color:#888;text-transform: uppercase;font-size:14px;padding:0px 5px}
+	/* Branding Standards */
+	.title-headline{font-color:#333;font-size:20px;font-weight:600}
+	
+	.padding-edge{width:95%}.man-headline-txt {
+    font-size: 24px;
+    font-weight: 600;
+}

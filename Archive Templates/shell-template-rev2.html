@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital Client View</title>
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap" rel="stylesheet">
+	<link href="../css/concole.css" rel="stylesheet" type="text/css">
+<script src="https://kit.fontawesome.com/e7bd7c493f.js" crossorigin="anonymous"></script>
+	 <!-- Theme Scripting -->
+	 <link rel="stylesheet" href="../assets/fonts/feather/feather.css" />
+    <link rel="stylesheet" href="../assets/libs/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="../dist/assets/libs/quill/dist/quill.core.css" />
+    <link rel="stylesheet" href="../assets/libs/highlightjs/styles/vs2015.css" />
+
+    <!-- Map -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    
+    <link rel="stylesheet" href="../assets/css/theme.min.css">
+  </head>
+	<style>
+	.nav-pills .nav-link.active, .nav-pills .show>.nav-link {background-color:#fff;color:#000;border-left:2px solid #4d88ff;font-size:14px;border-radius:0px;border-spacing:0px;padding-top:6px;padding-bottom:6px;text-transform: uppercase}
+		.padding-bottom{padding-bottom:15px}
+		.sidebar-glance-spacer{height:10px}
+		.rw-top-padding{padding-top:25px}
+		.screen-section-height{height:475px}
+		#screen-entry{width:150px}
+		#screenrescustom{box-shadow:none}
+		}
+	</style>
+  <body>
+  	<!-- body code goes here -->
+<div class ="spacing"></div>
+<div class ="container-fluid mobile-no">
+<div class = "row">
+<!--Side Bar Container Start -->
+<div class = "col-2 sidebar-bkd">
+<!-- Logo Area Header Split -->
+<div class = "row head-area logo-area">
+<div class ="col-12">
+<div class ="logo"></div>
+<!--logo area end -->
+</div> </div>	
+<div class ="row control-area">
+<div class =" col-12 shadow p-3 mb-5 bg-white  rounded">
+<!-- Sidebar Main Content Area -->	
+
+<div class ="row side-feature-area">
+<div class ="col-12">
+<!--Side feature Area Start -->
+<div class ="sidebar-section-head"> Login Information:</div>
+<br>
+<div class="navbar-user d-none d-md-flex" id="sidebarUser">
+
+            <!-- Icon -->
+            <a href="#sidebarModalActivity" class="navbar-user-link" data-toggle="modal">
+              <span class="icon">
+                <i class="fe fe-bell"></i>
+              </span>
+            </a>
+
+            <!-- Dropup -->
+            <div class="dropup justify-content-center">
+
+              <!-- Toggle -->
+              <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="avatar avatar-sm ">
+                  <img src="../images/favisirius.png"  class="avatar-img rounded-circle" alt="...">
+                </div>
+              </a>
+
+              <!-- Menu -->
+              <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
+                <a href="#" class="dropdown-item">Profile</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                <hr class="dropdown-divider">
+                <a href="#" class="dropdown-item">Logout</a>
+              </div>
+
+            </div>
+
+            <!-- Icon -->
+            <a href="#sidebarModalSearch" class="navbar-user-link" data-toggle="modal">
+              <span class="icon">
+                <i class="fe fe-search"></i>
+              </span>
+            </a>
+
+          </div>	<br>	
+<!--Side feature Area End -->
+</div></div>
+<nav>
+<div class ="row side-nav-area">
+<div class ="col-12">
+<hr>
+
+<!--Side Nav Area Start -->
+<div class="nav flex-column nav-pills" id="v-pills-tab-main-nav" role="tablist" aria-orientation="vertical">
+<br>
+<div class ="sidebar-head-wrapper">
+	<div class ="sub-section-copy"><i class="fas fa-server"></i> Digital Architecture</div>  </div>   
+	<a class="nav-link active" id="v-pills-site-overview-tab" data-toggle="pill" href="#v-pills-site-overview" role="tab" aria-controls="v-pills-site-overview" aria-selected="true">Site Overview</a>
+    <a class="nav-link" id="v-pills-analytics-tab" data-toggle="pill" href="#v-pills-analytics" role="tab" aria-controls="v-pills-analytics" aria-selected="false">Analytics</a>
+    <a class="nav-link" id="v-pills-systems-tab" data-toggle="pill" href="#v-pills-systems" role="tab" aria-controls="v-pills-systems" aria-selected="false">Systems</a>
+<br>
+	<div class ="sidebar-head-wrapper"><div class ="sub-section-copy"><i class="fas fa-building"></i>Company Info</div> </div> 
+   	  <a class=" nav-link " id="v-pills-people-tab" data-toggle="pill" href="#v-pills-people" aria-controls="v-pills-people" aria-selected="false" >Overview</a>
+	<a class=" nav-link " id="v-pills-finance-tab" data-toggle="pill" href="#v-pills-finance" aria-controls="v-pills-finance" aria-selected="false" >Financial Information</a>
+	 <a class="nav-link" id="v-pills-locations-tab" data-toggle="pill" href="#v-pills-locations" aria-controls="v-pills-location" aria-selected="false" >Location</a>
+	<br>
+	<div class ="sidebar-head-wrapper"><div class ="sub-section-copy"><i class="fas fa-user-friends"></i>People</div> </div>
+	  <a class="nav-link" id="v-pills-people-it-tab" data-toggle="pill" href="#v-pills-people-it" aria-controls="v-pills-people-it" aria-selected="false"  >Information Technology</a>
+      <a class="nav-link" id="v-pills-people-marketing-tab" data-toggle="pill" href="#v-pills-people-marketing" aria-controls="v-pills-people-marketing" aria-selected="false"  >Marketing</a>
+      <a class="nav-link" id="v-pills-people-hr-tab" data-toggle="pill" href="#v-pills-people-hr" aria-controls="v-pills-people-hr" aria-selected="false"  > Human Resources</a>
+	  <a class="nav-link" id="v-pills-people-sm-tab" data-toggle="pill"  href="#v-pills-people-sm" aria-controls="v-pills-people-sm" aria-selected="false" >Senior Management</a>
+	
+	
+	</div>
+	
+<!--Side Nav Area End -->
+	</div>
+	</div>
+</nav>
+<div class ="row side-glance-area">
+<div class ="col-12">
+<hr>
+<!--Side glance Area Start -->
+<div class ="sidebar-section-copy"> Session Alerts:</div>
+	<br>
+	<div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Image -->
+                        <a href="../dist/project-team-overview.html" class="avatar">
+                          <img src="../images/Dcview.png" alt="..." class="avatar-img rounded">
+                        </a>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Heading -->
+                        <h4 class="mb-1">
+                          <a href="team-overview.html">Launchday</a>
+                        </h4>
+
+                        <!-- Time -->
+                        <small class="text-muted">
+                          <i class="fe fe-clock"></i> Updated 2hr ago
+                        </small>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!--Side glance Area End -->
+</div></div>
+<!--Sidebar main content Area End -->
+</div></div></div>	
+<!--sidebar area end -->
+	
+
+<!-- Content Container Area start -->
+<div Class =" col-10">
+<div class = "row head-area">
+<div class ="col-12 ">
+<!-- nav Area Header Split -->
+<div class = "row">
+<div class =" col-10">
+<!--  url entry area -->	
+<div id ="url-entry">
+<input type="url" class="form-control" id="url-entry-holder" placeholder="ENTER URL:">
+</div>
+	
+<!--url entry Area End -->
+
+</div>	
+<div class ="col-1"> 
+
+
+</div>
+</div>	
+
+<!--nav  area end -->
+</div></div>	
+<div class ="container-fluid">
+<div class ="row main-content">
+<div class ="col-12 shadow p-3 mb-5 bg-white rounded ">
+	<!--  Main Content Area -->	
+<div class="tab-content" id="v-pills-tabContent-main-content">
+<!-- Site overview area --> 
+      <div class="tab-pane fade show active" id="v-pills-site-overview" role="tabpanel" aria-labelledby="v-pills-home-site-overview">
+		  <div class ="row">
+		  <div class ="col-12">
+		
+<div class ="row">
+<div Class ="col-12">
+<!--Breadcrumb bar -->
+<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-10">
+	<div class ="root-breadcrumb">Digital Architecture:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Site Overview </a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+   <a class="nav-link alive" id="v-pills-site-overview-tab0" data-toggle="pill" href="#v-pills-site-overview" role="tab" aria-controls="v-pills-site-overview" aria-selected="false">Site Overview</a>
+	  <a class="nav-link" id="v-pills-analytics-tab0" data-toggle="pill" href="#v-pills-analytics" role="tab" aria-controls="v-pills-analytics" aria-selected="false">Analytics</a>
+    <a class="nav-link" id="v-pills-systems-tab0" data-toggle="pill" href="#v-pills-systems" role="tab" aria-controls="v-pills-systems" aria-selected="false">Systems</a>
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div></div>
+	<div class ="col-1"></div>
+	<div class ="col-1 justify-content-end"><i class="fas fa-sign-out-alt"></i> LOGOUT</div>
+	<hr>
+	</div>
+	</div>
+<!--Breadcrumb bar end -->
+<!--Site overview nav begin -->
+<div class ="row">
+<div class ="col-12"style="width=1rem">
+<div id ="right-nav-items">
+<ul class="nav nav-pills justify-content-end" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-overview-tab" data-toggle="pill" href="#pills-overview" role="tab" aria-controls="pills-overview" aria-selected="true"><i class="fas fa-digital-tachograph"></i> Overview</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="pills-access-tab" data-toggle="pill" href="#pills-access" role="tab" aria-controls="pills-access" aria-selected="true"><i class="fas fa-universal-access"></i> Accessability</a>
+  </li>
+  <li class="nav-item">
+     <a class="nav-link" id="pills-bp-tab" data-toggle="pill" href="#pills-bp" role="tab" aria-controls="pills-bp" aria-selected="true"><i class="fas fa-award"></i> Best Practices</a>
+  </li>
+  <li class="nav-item">
+  </li>
+</ul>
+<!-- site overview nav container div classes -->	
+</div>	</div></div>
+<!-- Site overview nav end -->
+
+	
+	<!-- Main-Content Area Begins -->
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
+	<!-- Site name Section -->
+
+<!-- Site name section end-->		 
+<div class ="row">
+	 <div class ="col-9">
+<!-- Screen side -->
+		 <div Class = "row">
+		 <div class ="col-12 screen-section-height">
+<!-- Main Screen Area -->		 
+<div class ="container Fluid">
+	<div class ="row">
+<!-- This row is for screen size icons -->
+<div class ="col-2"><i class="fas fa-tv"></i> Deskop </div>
+<div class =" col-2"><i class="fas fa-laptop"></i> Laptop</div>
+<div class ="col-2"><i class="fas fa-tablet-alt"></i> Tablet</div>
+<div class ="col-2"><i class="fas fa-tablet-alt"></i> Mobile</div>
+<div class ="col-4"><div class="dropdown">
+  <button class="btn  dropdown-toggle" type="button" id="screenrescustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Enter custom Dimesion H x W
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#"><div id ="screen-entry">
+<input type="url" class="form-control" id="resolution-entry-holder" placeholder="1440x1280">
+</div></a>
+    
+  </div>
+</div>
+	
+		</div>
+<!-- End of Icon Container (below 2 divs are for container start new section after divs) -->
+</div>
+</div>
+<!-- New Section -->		
+<!--Main Screen Area End -->			 
+		</div>
+		</div> 
+		 
+		<!-- Stats secton -->		
+		 <div class="row">
+          <div class="col-4 ">
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h6 class="text-uppercase text-muted mb-2">
+                      Alexa Site Rating
+                    </h6>
+
+                    <div class="row align-items-center no-gutters">
+                      <div class="col-auto">
+
+                        <!-- Heading -->
+                        <span class="h2 mr-2 mb-0">
+                          84.5%
+                        </span>
+
+                      </div>
+                     
+                    </div> <!-- / .row -->
+					</div>
+				  </div>
+                
+                </div> <!-- / .row -->
+
+              </div>
+             </div>
+	
+          <div class="col-4">
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h6 class="text-uppercase text-muted mb-2">
+                     External Link Count
+                    </h6>
+
+                    <!-- Heading -->
+                    <span class="h2 mb-0">
+                     xxx
+                    </span>
+
+                  </div>
+                  
+				  </div>
+              </div>
+            </div>
+
+		</div>
+<div class="col-4 ">
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h6 class="text-uppercase text-muted mb-2">
+                      Site Speed Average
+                    </h6>
+
+                    <!-- Heading -->
+                    <span class="h2 mb-0">
+                     xxx
+                    </span>
+
+                   
+
+                  </div>
+                  
+                </div> <!-- / .row -->
+
+              </div></div>
+    </div>    </div>	    
+<!-- Stats Section end-->
+
+		 
+<!-- Screen Side end -->
+	</div>
+		
+<!-- NO DIVS BELOW THIS LINE THIS ENDS THE LEFT SECTION OF THE PAGE -->
+		
+<div class ="col-3">
+<!--Right Glance Panel start -->
+<!-- Audit-Section -->
+<div class = "row">
+<div class ="col-4 rw-top-padding">
+<h3>Site Audit:</h3>	
+</div>
+<div class ="col-8 justify-content-end">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="desktop-audit-tab" data-toggle="tab" href="#desktop-audit" role="tab" aria-controls="desktop-audit" aria-selected="true"><i class="fas fa-desktop"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="mobile-audit-tab" data-toggle="tab" href="#mobile-audit" role="tab" aria-controls="mobile-audit" aria-selected="false"><i class="fas fa-mobile-alt"></i></a>
+  </li>
+ 
+</ul>	
+</div>	
+
+</div>
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="desktop-audit" role="tabpanel" aria-labelledby="desktop-audit-tab">
+	<!-- Desktop Audit Panel Items Start -->
+	  <a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop Accessability Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>
+<a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop Performance Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>
+	  <a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop PWA Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>
+	  <a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop SEO Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>
+	</div>
+	<!-- Desktop Audit Panel Items end -->
+	
+	<div class="tab-pane fade" id="mobile-audit" role="tabpanel" aria-labelledby="mobile-audit-tab">
+	<!-- Mobile Audit Items Start -->
+		  <a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop Accessability Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>
+<a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop Performance Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>
+	  <a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop PWA Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>
+	  <a class="list-group-item" href="#">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <h2> xx</h2>
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Desktop SEO Audit
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </a><br>	
+<!-- Mobile Audit Items END -->
+	</div>
+<!--end Audit Panel-->
+   <div class="card">
+              <div class="card-header">
+
+                <!-- Title -->
+                <h4 class="card-header-title">
+                  Site Description :
+
+
+              </div>
+              <div class="card-body">
+
+                
+              <div class="card-footer">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
+<!--Right Glance Panel End -->
+<!-- NO DIVS BELOW THIS LINE THIS ENDS THE LEFT SECTION OF THE PAGE -->		
+	</div>	  
+	
+<!--- NO DIVS BELOW THIS LINE THIS ENDS THE MAIN OVERVIEW SECTION -->	  
+	</div> </div>  </div> 
+  <div class="tab-pane fade" id="pills-access" role="tabpanel" aria-labelledby="pills-access-tab"><i class="fas fa-universal-access"></i><br>Accessability</div>
+  <div class="tab-pane fade" id="pills-bp" role="tabpanel" aria-labelledby="pills-bp-tab"><i class="fas fa-award"></i><br>Best Practices</div>
+</div>
+<!-- Main Content Area Ends -->
+</div>	</div>
+			  </div></div></div>
+	
+<!-- Site Overview area end-->			  
+		
+		  </div>
+	
+      <div class="tab-pane fade" id="v-pills-analytics" role="tabpanel" aria-labelledby="v-pills-analytics-tab">
+		  <div class ="row">
+		  <div class ="col-12">
+		<!-- Analytics area --> 
+	<!--Breadcrumb bar -->
+<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">Digital Architecture:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Anlytics </a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+   <a class="nav-link " id="v-pills-site-overview-tab1" data-toggle="pill" href="#v-pills-site-overview" role="tab" aria-controls="v-pills-site-overview" aria-selected="false">Site Overview</a>
+	  <a class="nav-link alive" id="v-pills-analytics-tab1" data-toggle="pill" href="#v-pills-analytics" role="tab" aria-controls="v-pills-analytics" aria-selected="false">Analytics</a>
+    <a class="nav-link" id="v-pills-systems-tab1" data-toggle="pill" href="#v-pills-systems" role="tab" aria-controls="v-pills-systems" aria-selected="false">Systems</a>
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- Analytics area end-->			  
+			</div>
+		  </div>
+	
+	
+	
+	</div>
+      <div class="tab-pane fade" id="v-pills-systems" role="tabpanel" aria-labelledby="v-pills-systems-tab">
+	 <div class ="row">
+		  <div class ="col-12">
+		<!-- Systems area --> 
+	<!--Breadcrumb bar -->
+<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">Digital Architecture:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Systems </a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+   <a class="nav-link " id="v-pills-site-overview-tab2" data-toggle="pill" href="#v-pills-site-overview" role="tab" aria-controls="v-pills-site-overview" aria-selected="false">Site Overview</a>
+	  <a class="nav-link " id="v-pills-analytics-tab2" data-toggle="pill" href="#v-pills-analytics" role="tab" aria-controls="v-pills-analytics" aria-selected="false">Analytics</a>
+    <a class="nav-link alive" id="v-pills-systems-tab2" data-toggle="pill" href="#v-pills-systems" role="tab" aria-controls="v-pills-systems" aria-selected="false">Systems</a>
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- Systems area end-->			  
+			</div>
+		  </div>
+	
+	
+	</div>
+	 <div class="tab-pane fade" id="v-pills-people" role="tabpanel" aria-labelledby="v-pills-people-tab">
+	 <div class ="row">
+		  <div class ="col-12">
+		<!--Company Overview area --> 
+	<!--Breadcrumb bar -->
+<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">Company Information:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Overview </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class=" nav-link alive " id="v-pills-people-tab3" data-toggle="pill" href="#v-pills-people" aria-controls="v-pills-people" aria-selected="false" >Overview</a>
+	<a class=" nav-link " id="v-pills-finance-tab3" data-toggle="pill" href="#v-pills-finance" aria-controls="v-pills-finance" aria-selected="false" >Financial Information</a>
+	 <a class="nav-link" id="v-pills-locations-tab3" data-toggle="pill" href="#v-pills-locations" role="tab" >Location</a>	
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- Company Overview area end-->			  
+			</div>
+		  </div>
+	
+	
+	</div>
+	 <div class="tab-pane fade" id="v-pills-finance" role="tabpanel" aria-labelledby="v-pills-finance">
+	 <div class ="row">
+		  <div class ="col-12">
+		<!--financial area --> 
+	
+	<!--Breadcrumb bar -->
+	<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">Company Information:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Financial Information </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class=" nav-link " id="v-pills-people-tab" data-toggle="pill" href="#v-pills-people" aria-controls="v-pills-people" aria-selected="false" >Overview</a>
+	<a class=" nav-link alive" id="v-pills-finance-tab" data-toggle="pill" href="#v-pills-finance" aria-controls="v-pills-finance" aria-selected="false" >Financial Information</a>
+	 <a class="nav-link" id="v-pills-locations-tab" data-toggle="pill" href="#v-pills-locations" role="tab" >Location</a>	
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> LOGOUT</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- financial area end-->			  
+		 </div> </div>
+		  </div>
+	 <div class="tab-pane fade" id="v-pills-locations" role="tabpanel" aria-labelledby="v-pills-locations-tab">
+	
+	 <div class ="row">
+		  <div class ="col-12">
+		<!-- location area --> 
+	<!--Breadcrumb bar -->
+	<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">Company Information:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Location </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class=" nav-link " id="v-pills-people-tab" data-toggle="pill" href="#v-pills-people" aria-controls="v-pills-people" aria-selected="false" >Overview</a>
+	<a class=" nav-link " id="v-pills-finance-tab" data-toggle="pill" href="#v-pills-finance" aria-controls="v-pills-finance" aria-selected="false" >Financial Information</a>
+	 <a class="nav-link alive" id="v-pills-locations-tab" data-toggle="pill" href="#v-pills-locations" role="tab" >Location</a>	
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- location area end-->			  
+			</div>
+		  </div>
+	
+	
+	</div>
+	
+	
+      <div class="tab-pane fade" id="v-pills-people-it" role="tabpanel" aria-labelledby="v-pills-people-it-tab">
+	
+	 <div class ="row">
+		  <div class ="col-12">
+		<!-- people IT area --> 
+	<!--Breadcrumb bar -->
+	<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">People:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Information Technology </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class="nav-link alive" id="v-pills-people-it-tab" data-toggle="pill" href="#v-pills-people-it"aria-controls="v-pills-people-it" aria-selected="false"  >Information Technology</a>
+      <a class=" nav-link " id="v-pills-people-marketing-tab" data-toggle="pill" href="#v-pills-people-marketing" aria-controls="v-pills-people-marketing" aria-selected="false"  >Marketing</a>
+      <a class="nav-link" id="v-pills-people-hr-tab" data-toggle="pill" href="#v-pills-people-hr" aria-controls="v-pills-people-hr" aria-selected="false"  > Human Resources</a>
+	  <a class="nav-link " id="v-pills-people-sm-tab"data-toggle="pill"  href="#v-pills-people-sm"  aria-controls="v-pills-people-sm" aria-selected="false" >Senior Management</a>
+	
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- People IT area end-->			  
+			</div>
+		  </div>
+	
+	
+	</div>
+	 <div class="tab-pane fade" id="v-pills-people-marketing" role="tabpanel" aria-labelledby="v-pills-people-marketing-tab">
+	
+	 <div class ="row">
+		  <div class ="col-12">
+		<!-- people marketing area --> 
+	<!--Breadcrumb bar -->
+	<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">People:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Marketing </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class="nav-link " id="v-pills-people-it-tab" data-toggle="pill" href="#v-pills-people-it"aria-controls="v-pills-people-it" aria-selected="false"  >Information Technology</a>
+      <a class=" nav-link alive " id="v-pills-people-marketing-tab" data-toggle="pill" href="#v-pills-people-marketing" aria-controls="v-pills-people-marketing" aria-selected="false"  >Marketing</a>
+      <a class="nav-link" id="v-pills-people-hr-tab" data-toggle="pill" href="#v-pills-people-hr" aria-controls="v-pills-people-hr" aria-selected="false"  > Human Resources</a>
+	  <a class="nav-link " id="v-pills-people-sm-tab"data-toggle="pill"  href="#v-pills-people-sm"  aria-controls="v-pills-people-sm" aria-selected="false" >Senior Management</a>
+	
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- People Marketing area end-->			  
+			</div>
+		  </div>
+	
+	
+	</div>
+	 <div class="tab-pane fade" id="v-pills-people-hr" role="tabpanel" aria-labelledby="v-pills-people-hr-tab">
+	
+	 <div class ="row">
+		  <div class ="col-12">
+		<!-- people hr area --> 
+	<!--Breadcrumb bar -->
+	<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">People:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Human Resources </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class="nav-link " id="v-pills-people-it-tab" data-toggle="pill" href="#v-pills-people-it"aria-controls="v-pills-people-it" aria-selected="false"  >Information Technology</a>
+      <a class=" nav-link " id="v-pills-people-marketing-tab" data-toggle="pill" href="#v-pills-people-marketing" aria-controls="v-pills-people-marketing" aria-selected="false"  >Marketing</a>
+      <a class="nav-link alive" id="v-pills-people-hr-tab" data-toggle="pill" href="#v-pills-people-hr" aria-controls="v-pills-people-hr" aria-selected="false"  > Human Resources</a>
+	  <a class="nav-link " id="v-pills-people-sm-tab"data-toggle="pill"  href="#v-pills-people-sm"  aria-controls="v-pills-people-sm" aria-selected="false" >Senior Management</a>
+	
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- People hr area end-->			  
+			</div>
+		  </div>
+	
+	
+	</div>
+	
+	 <div class="tab-pane fade" id="v-pills-people-sm" role="tabpanel" aria-labelledby="v-pills-people-sm-tab">
+	
+	 <div class ="row">
+		  <div class ="col-12">
+		<!-- people SM area --> 
+	<!--Breadcrumb bar -->
+	<div id ="breadcrumb-dcv">
+	<div class ="row">
+	<div class ="col-8">
+	<div class ="root-breadcrumb">People:</div><div class ="child-breadcrumb"> 
+	<div class="dropdown">
+  <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Senior Management </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class="nav-link " id="v-pills-people-it-tab" data-toggle="pill" href="#v-pills-people-it"aria-controls="v-pills-people-it" aria-selected="false"  >Information Technology</a>
+      <a class=" nav-link " id="v-pills-people-marketing-tab" data-toggle="pill" href="#v-pills-people-marketing" aria-controls="v-pills-people-marketing" aria-selected="false"  >Marketing</a>
+      <a class="nav-link" id="v-pills-people-hr-tab" data-toggle="pill" href="#v-pills-people-hr" aria-controls="v-pills-people-hr" aria-selected="false"  > Human Resources</a>
+	  <a class="nav-link alive" id="v-pills-people-sm-tab"data-toggle="pill"  href="#v-pills-people-sm"  aria-controls="v-pills-people-sm" aria-selected="false" >Senior Management</a>
+	
+  </div>
+</div>
+	
+	</div>
+<div class ="breadcrumb-clear"></div>
+	</div>
+	
+	<div class ="col-1"> </div>
+	<div class ="col-1"></div>
+	<div class ="col-1"></div>
+	<div class ="col-1"><i class="fas fa-sign-out-alt"></i> logout</div>
+	<hr>
+	</div></div>
+	
+<!--Breadcrumb bar end -->
+<!-- People SM area end-->			  
+			</div>
+		  </div>
+	
+	
+	</div>
+	
+    </div>
+	
+<!--main content Area End -->
+
+</div></div>
+	
+<!-- Content Container Area End -->	
+	</div></div </div> </div></div>
+<!-- End Main Container -->
+<footer>
+<div class = "row footer-bkd">
+<div class = "col-12 ">
+<!-- Footer Start Content -->
+	
+<!--Footer End Content -->
+</div>	
+</div>
+</footer>	 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script>
+$(function () {
+    $('.dropdown-menu a').click(function (e) {
+        $('.active').removeClass('active');
+    });
+});
+</script>
+<!-- Theme JS -->
+	<script src="assets/libs/@shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
+    <script src="assets/libs/autosize/dist/autosize.min.js"></script>
+    <script src="assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="../dist/assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../dist/assets/libs/list.js/dist/list.min.js"></script>
+    <script src="../dist/assets/libs/quill/dist/quill.min.js"></script>
+    <script src="../dist/assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="assets/libs/chart.js/Chart.extension.js"></script>
+
+    <!-- Map -->
+   
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/dashkit.min.js"></script>
+
+	
+  </body>
+</html>
